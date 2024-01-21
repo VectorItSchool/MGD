@@ -17,18 +17,9 @@ public class Player : MonoBehaviour
     // Update is called once per frame Block
     void Update()
     {
-       // if (platform.transform.position.x >= -8 && platform.transform.position.x <= 8)
-       // {
-            platform.Translate(Input.GetAxis("Horizontal") * new Vector3(0, speed) * Time.deltaTime);
-        //}
-        /*else
-        {
-            platform.transform.position = new Vector2(Mathf.Clamp(platform.transform.position.x,-8,8),platform.transform.position.y);
-        }*/
+        platform.Translate(Input.GetAxis("Horizontal") * new Vector3(0, speed) * Time.deltaTime);
         if(Input.GetKeyDown(KeyCode.Space))
         {   
-            //ball.bodyType = RigidbodyType2D.Dynamic;
-            //ball.transform.SetParent(null);
             ball.AddForce(force);
         }
     }
